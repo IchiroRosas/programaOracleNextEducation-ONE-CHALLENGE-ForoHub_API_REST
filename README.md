@@ -1,0 +1,78 @@
+
+# ForoHub - API RESTful para Gestión de Tópicos
+
+Este proyecto es una API RESTful desarrollada como parte del Challenge **ForoHub** del programa Oracle Next Education (ONE). Permite gestionar tópicos de un foro con funcionalidades de autenticación, registro y visualización de contenido, implementando seguridad con JWT y documentación interactiva con Swagger.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+```
+- Lenguaje: Java 17
+- Framework: Spring Boot 3.5.3
+- Seguridad: Spring Security 6 + JWT
+- Persistencia: Spring Data JPA
+- Base de Datos: MySQL
+- Migraciones de esquema: Flyway
+- Validación: Jakarta Bean Validation
+- Documentación API: SpringDoc OpenAPI + Swagger UI
+- Control de dependencias: Maven
+- IDE: IntelliJ IDEA / Eclipse
+```
+
+---
+
+## ⚙️ Configuración Inicial
+
+### 1. Clonar el repositorio
+
+### 2. Configurar el archivo `application.properties` con tu BD MySQL
+
+## 🧾 Inserción previa en la base de datos
+
+Antes de hacer login, es necesario insertar manualmente un usuario en la base de datos con la contraseña encriptada en BCrypt:
+Puedes usar herramientas como [BCrypt Generator](https://bcrypt-generator.com/) para generar el hash de una contraseña como `123456`.
+
+---
+
+### Request body - ejemplo
+
+```json
+{
+  "email": "usuario@email.com",
+  "contrasenia": "123456"
+}
+```
+
+### Response
+
+```json
+{
+  "ok": true,
+  "message": "Token generado correctamente",
+  "data": {
+    "jwt": "eyJhbGciOiJIUzI1NiIsInR..."
+  }
+}
+```
+
+Este token debe usarse en las siguientes peticiones agregándolo al `Authorization` header como:
+
+```
+Bearer eyJhbGciOiJIUzI1NiIsInR...
+```
+
+---
+
+## 📄 Documentación Swagger
+
+Disponible automáticamente una vez ejecutada la aplicación:
+
+- [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+- [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
+
+---
+
+## ✨ Créditos
+
+Proyecto realizado por Raúl Ichiro Rosas Chinen como parte del programa Oracle Next Education (ONE) - Alura Latam.
