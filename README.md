@@ -2,7 +2,7 @@
 # ForoHub - API RESTful para Gestión de Tópicos
 
 ---
-Este proyecto fue desarrollado para el Challenge ForoHub del programa Oracle Next Education (ONE), en el marco de la formación en Java y Spring Framework de la especialización Backend. Se trata de una API RESTful para la gestión de tópicos en un foro, que incluye autenticación, registro y visualización de contenido, con seguridad implementada mediante JWT y documentación interactiva a través de Swagger.
+Este proyecto fue desarrollado para el Challenge ForoHub del programa Oracle Next Education (ONE), en el marco de la formación en Java y Spring Framework de la especialización Backend. Se trata de una API RESTful para la gestión de tópicos en un foro, con seguridad implementada mediante JWT y validación de credenciales encriptadas con BCrypt, además de documentación interactiva a través de Swagger.
 ---
 
 ## 🛠️ Tecnologías Utilizadas
@@ -10,7 +10,7 @@ Este proyecto fue desarrollado para el Challenge ForoHub del programa Oracle Nex
 ```
 - Lenguaje: Java 17
 - Framework: Spring Boot 3.5.3
-- Seguridad: Spring Security 6 + JWT
+- Seguridad: Spring Security 6 + JWT + BCrypt
 - Persistencia: Spring Data JPA
 - Base de Datos: MySQL
 - Migraciones de esquema: Flyway
